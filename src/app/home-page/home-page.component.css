@@ -1,0 +1,29 @@
+.homeContainer {
+  width: 85%;
+  height: 100vh;
+  margin-left: 15%;
+  margin-top: 5%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  width: 60%;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  font-weight: bold;
+}
+
+.introduction {
+  margin-top: 20px;
+  width: 50%;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: italic;
+  color: #54577C;
+}
