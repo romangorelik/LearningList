@@ -1,6 +1,6 @@
 .homeContainer {
   width: 85%;
-  height: 100vh;
+  height: 80vh;
   margin-left: 15%;
   margin-top: 5%;
   display: flex;
@@ -16,6 +16,7 @@
   font-family: 'Noto Sans JP', sans-serif;
   text-shadow: 0.5px 0.5px 0.5px black;
   font-weight: bold;
+  margin-bottom: 60px;
 }
 
 .introduction {
@@ -26,4 +27,48 @@
   font-family: 'Noto Sans JP', sans-serif;
   font-style: italic;
   color: #54577C;
+}
+
+.introText {
+  font-size: 24px;
+}
+
+.daily {
+  width: 60%;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  background: linear-gradient(to right, transparent, white, transparent);
+}
+
+p {
+  font-size: 2.5vh;
+}
+
+.arrow {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  font-size: 36px;
+}
+
+.task {
+  width: 60%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.date {
+  font-size: 14px;
+  font-style: italic;
+  color: darkgray;
 }

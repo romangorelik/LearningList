@@ -13,7 +13,16 @@
     <span style='color: #0F9D58'>e</span>
   </div>
   <div class='introduction'>
-    <p>This is the documentation of my journey applying to Google. I will be submitting and writing all my notes, as well as all the problems and solutions that I encounter along the way. This will be updated as I continue on my process.</p>
+    <div class='introText'>This is the documentation of my journey applying to Google. I will be submitting and writing all my notes, as well as all the problems and solutions that I encounter along the way. This will be updated as I continue on my process.</div>
+  </div>
+
+  <div class='daily' *ngIf='dailyTasks.length > 0'>
+    <div class='arrow' (click)='leftTask()'><p class='arrow'>⥢</p></div>
+    <div class='task'>
+      <div class='date'>{{dailyTasks[taskIndex].time | date: 'mediumDate'}}</div>
+      <p>{{dailyTasks[taskIndex].dailyTask}}</p>
+    </div>
+    <div class='arrow' (click)='rightTask()'><p class='arrow'>⥤</p></div>
   </div>
 </div>
 
