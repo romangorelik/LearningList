@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./big-o.component.css']
 })
 export class BigOComponent implements OnInit {
+  bigOData: any[] = [{bool: false}, {bool: true}, {bool: false}, {bool: true}, {bool: true}];
+  
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    
   }
+  
 
 }

@@ -1,3 +1,41 @@
 <div class='bigOContainer'>
-  <div>Hello Big O</div>
+  <div class='title'>Big O</div>
+  <div class='introduction'>In computer science, big O notation is used to classify algorithms according to how their running time or space requirements grow as the input size grows.</div>
+
+  <div class='firstMessage'>
+    <!-- {{bigOData[0].bool}}
+    <div class='content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div> -->
+    <div class='header'>
+      <div class='firstTitle'>{{'Lorem ipsum' | uppercase}} </div>
+      <div class='firstDate'>April 25th, 2019</div>
+    </div>
+
+    <div class='body'>
+      <div class='firstHalf'>
+        <ul>
+          <li>Hello there world</li>
+          <li>Goodbye world</li>
+          <li>Does this make sense to look this way</li>
+        </ul>
+      </div>
+
+      <div class='secondHalf'>
+        <ul>
+          <li class='liStyle'>Hello world there</li>
+          <li class='liStyle'>World goodbye</li>
+          <li class='liStyle'>Way this look to sense make this doesWay this look to sense make this doesWay this look to sense make this doesWay this look to sense make this doesWay this look to sense make this doesWay this look to sense make this does</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class='otherMessagesContainer' *ngFor='let type of bigOData; index as i'>
+    <div *ngIf='i > 0'>
+      <div class='otherMessages'>
+        {{type.bool}}
+        <div class='content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div>
 </div>
