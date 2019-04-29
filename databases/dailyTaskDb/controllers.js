@@ -21,3 +21,9 @@ exports.clearAll = (req, res) => {
         .catch(err => res.send(err))
 }
 
+exports.clearMessage = (req, res) => {
+  Daily.deleteOne({dailyTask: req.body.dailyTask})
+           .then(response => res.send('deleted one'))
+           .catch(err => res.send(err))
+}
+
