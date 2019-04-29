@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BigOService } from './big-o.service';
 
 @Component({
   selector: 'app-big-o',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./big-o.component.css']
 })
 export class BigOComponent implements OnInit {
-  bigOData: any[] = [{bool: false}, {bool: true}, {bool: false}, {bool: true}, {bool: true}];
+  bigOData: any[] = [];
+  newestEntry: {} = {};
   
 
-  constructor() {
+  constructor(private service: BigOService) {
+    this.service.getBigO().subscribe(bigO => {
+      this.bigOData = bigO;
+      this.newestEntry = this.bigOData[this.bigOData.length]
+    })
+
+    console.log(this.newestEntry)
   }
 
   ngOnInit() {
@@ -18,3 +26,5 @@ export class BigOComponent implements OnInit {
   
 
 }
+
+

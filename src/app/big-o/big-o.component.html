@@ -2,28 +2,26 @@
   <div class='title'>Big O</div>
   <div class='introduction'>In computer science, big O notation is used to classify algorithms according to how their running time or space requirements grow as the input size grows.</div>
 
-  <div class='firstMessage'>
-    <!-- {{bigOData[0].bool}}
-    <div class='content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div> -->
+  <div class='firstMessage' *ngIf="bigOData.length > 0">
     <div class='header'>
-      <div class='firstTitle'>{{'Lorem ipsum' | uppercase}} </div>
-      <div class='firstDate'>April 25th, 2019</div>
+      <div class='firstTitle'>{{bigOData[bigOData.length - 1].title | uppercase}} </div>
+      <div class='firstDate'>{{bigOData[bigOData.length - 1].time | date: 'mediumDate'}}</div>
     </div>
 
     <div class='body'>
       <div class='firstHalf'>
         <ul>
-          <li>Hello there world</li>
-          <li>Goodbye world</li>
-          <li>Does this make sense to look this way</li>
+          <li class='liStyle'>{{bigOData[bigOData.length - 1].first}}</li>
+          <li class='liStyle'>{{bigOData[bigOData.length - 1].second}}</li>
+          <li class='liStyle'>{{bigOData[bigOData.length - 1].third}}</li>
         </ul>
       </div>
 
       <div class='secondHalf'>
         <ul>
-          <li class='liStyle'>Hello world there</li>
-          <li class='liStyle'>World goodbye</li>
-          <li class='liStyle'>Way this look to sense make this doesWay this look to sense make this doesWay this look to sense make this doesWay this look to sense make this doesWay this look to sense make this doesWay this look to sense make this does</li>
+          <li class='liStyle'>{{bigOData[bigOData.length - 1].fourth}}</li>
+          <li class='liStyle'>{{bigOData[bigOData.length - 1].fifth}}</li>
+          <li class='liStyle'>{{bigOData[bigOData.length - 1].sixth}}</li>
         </ul>
       </div>
     </div>
@@ -31,10 +29,31 @@
   </div>
 
   <div class='otherMessagesContainer' *ngFor='let type of bigOData; index as i'>
-    <div *ngIf='i > 0'>
+    <div *ngIf='i < bigOData.length - 1'>
       <div class='otherMessages'>
-        {{type.bool}}
-        <div class='content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+        <div class='otherHeader'>
+          <div class='otherTitle'>{{type.title | uppercase}} </div>
+          <div class='otherDate'>{{type.time | date: 'mediumDate'}}</div>
+        </div>
+
+        <div class='otherBody'>
+          <div class='otherFirstHalf'>
+            <ul>
+              <li class='liStyle2'>{{type.first}}</li>
+              <li class='liStyle2'>{{type.second}}</li>
+              <li class='liStyle2'>{{type.third}}</li>
+            </ul>
+          </div>
+          <div class='otherSecondHalf'>
+            <ul>
+              <li class='liStyle2'>{{type.fourth}}</li>
+              <li class='liStyle2'>{{type.fifth}}</li>
+              <li class='liStyle2'>{{type.sixth}}</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
